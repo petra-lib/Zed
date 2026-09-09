@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "agent_buffer_font_family": "FiraCode Nerd Font",
+    "agent_ui_font_family": "FiraCode Nerd Font",
+    "ui_font_family": "FiraCode Nerd Font",
+    "buffer_font_family": "FiraCode Nerd Font",
+    "buffer_font_size": 16,
+    "agent_ui_font_size": 13,
+    "agent_buffer_font_size": 13.0,
+    "ui_font_size": 13,
+    "buffer_line_height": {
+        "custom": 1.1,
+    },
+    "hard_tabs": false,
     "theme": "One Dark Pro",
     "vim_mode": true,
     // "helix_mode": true,
@@ -53,16 +65,7 @@
             "type": "registry",
         },
     },
-    "buffer_font_size": 16,
-    "agent_ui_font_size": 13,
-    "agent_buffer_font_size": 13,
-    "ui_font_size": 13,
-    "buffer_line_height": {
-        "custom": 1.1,
-    },
     // "buffer_font_family": ".ZedMono",
-    "buffer_font_family": "Liberation Mono",
-    "ui_font_family": "Liberation Mono",
     // "buffer_font_family": "JetBrainsMono Nerd Font",
     "terminal": {
         "scrollbar": {
@@ -103,9 +106,10 @@
         "model_parameters": [],
     },
     "indent_guides": {
+        "active_line_width": 2,
         "coloring": "indent_aware",
         "line_width": 1,
-        "enabled": false,
+        "enabled": true,
     },
     "inlay_hints": {
         "show_value_hints": false,
@@ -342,5 +346,100 @@
             "editor.document_highlight.read_background": "#FFFFFF00",
             "editor.document_highlight.bracket_background": "#FFFFFF00",
         },
+    },
+    "global_lsp_settings": {
+        // TODO-HIGHLIGHT token rules
+        "semantic_token_rules": [
+            {
+                "token_type": "keyword",
+                "token_modifiers": [
+                    "todo"
+                ],
+                "foreground_color": "#FF8C00",
+                "background_color": "#2B1700",
+                "font_weight": "bold"
+            },
+            {
+                "token_type": "keyword",
+                "token_modifiers": [
+                    "fixme"
+                ],
+                "foreground_color": "#FF2D55",
+                "background_color": "#2B0011",
+                "font_weight": "bold"
+            },
+            {
+                "token_type": "keyword",
+                "token_modifiers": [
+                    "hack"
+                ],
+                "foreground_color": "#FFD60A",
+                "background_color": "#272100",
+                "font_weight": "bold"
+            },
+            {
+                "token_type": "keyword",
+                "token_modifiers": [
+                    "note"
+                ],
+                "foreground_color": "#0A84FF",
+                "background_color": "#001B2B",
+                "font_weight": "bold"
+            },
+            {
+                "token_type": "keyword",
+                "token_modifiers": [
+                    "info"
+                ],
+                "foreground_color": "#0A84FF",
+                "background_color": "#001B2B",
+                "font_weight": "bold"
+            },
+            {
+                "token_type": "keyword",
+                "token_modifiers": [
+                    "warn"
+                ],
+                "foreground_color": "#FF9F0A",
+                "background_color": "#271B00",
+                "font_weight": "bold"
+            },
+            {
+                "token_type": "keyword",
+                "token_modifiers": [
+                    "warning"
+                ],
+                "foreground_color": "#FF9F0A",
+                "background_color": "#271B00",
+                "font_weight": "bold"
+            },
+            {
+                "token_type": "keyword",
+                "token_modifiers": [
+                    "bug"
+                ],
+                "foreground_color": "#FF453A",
+                "background_color": "#2B0A00",
+                "font_weight": "bold"
+            },
+            {
+                "token_type": "keyword",
+                "token_modifiers": [
+                    "xxx"
+                ],
+                "foreground_color": "#BF5AF2",
+                "background_color": "#1B0029",
+                "font_weight": "bold"
+            },
+            {
+                "token_type": "keyword",
+                "token_modifiers": [
+                    "deprecated"
+                ],
+                "foreground_color": "#98989D",
+                "background_color": "#1A1A1A",
+                "font_weight": "bold"
+            }
+        ]
     },
 }
